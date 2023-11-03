@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+
+  db:
+    image: mongo:latest
+    volumes:
+      - mongo:/data/db
+    env_file:
+      - ./.env
+
+  backend:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:${PORT}"
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+
+volumes:
+    mongo:

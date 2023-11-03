@@ -1,0 +1,10 @@
+DB_URI=mongodb://db:27017/user_db
+EMAIL=some@email.domain
+NOTIFICATIONS_MAX_COUNT=10
+SMTP_HOST=some_smtp_server
+SMTP_PORT=25
+SMTP_LOGIN=some_login@email.domain
+SMTP_PASSWORD=some_password
+SMTP_EMAIL=some@email.domain
+SMTP_NAME=some_name
+PORT=8000
